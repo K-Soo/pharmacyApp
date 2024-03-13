@@ -9,7 +9,9 @@ import SwiftUI
 
 struct EmptyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      Spacer()
+        Text("검색결과가 없습니다.")
+      Spacer()
     }
 }
 

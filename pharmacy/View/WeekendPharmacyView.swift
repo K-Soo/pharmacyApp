@@ -15,20 +15,24 @@ struct WeekendPharmacyView: View {
 
   var body: some View {
     NavigationStack {
-      VStack {
-        HStack(alignment: .top) {
-          AddressPickerView()
-          Spacer()
-        }
 
+      HStack(alignment: .top) {
+        AddressPickerView()
+  
+        Spacer()
+      }
+      VStack {
         if vm.pharmacyItems.isEmpty && !vm.isLoading {
-          EmptyView()
-          Spacer()
+          VStack {
+            EmptyView()
+            Spacer()
+          }
+          .frame(maxWidth: .infinity,maxHeight: .infinity)  
         } else {
           ScrollView(showsIndicators: false) {
             ForEach(0..<vm.pharmacyItems.count, id: \.self) { index in
               LazyVStack {
-                PharmacyCellView(pharmacy: vm.pharmacyItems[index], index: index)
+                PharmacyCellView(pharmacy: vm.pharmacyItems[index])
                   .onAppear {
                     if index >= vm.pharmacyItems.count - 1 {
                       vm.fetchPharmacyIfNeeded(for: index)
@@ -42,15 +46,15 @@ struct WeekendPharmacyView: View {
               }
             } //ForEach
             .padding(10)
-            .frame(maxWidth: .infinity,maxHeight: .infinity)
           } //ScrollView
+          .frame(maxWidth: .infinity,maxHeight: .infinity)
           .background(.gray.opacity(0.08))
         }
       } //VStack
       .navigationTitle("주말약국")
       .navigationBarTitleDisplayMode(.inline)
       .overlay(content: {
-          if vm.isLoading && vm.pharmacyItems.isEmpty {
+        if vm.isLoading && vm.pharmacyItems.isEmpty {
           ProgressView()
         }
       })

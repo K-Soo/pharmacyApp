@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct DropDown: View {
+  var content: [String]
+  @Binding var selection: String
+  var activeTint: Color
+  var inActivetint: Color
+  @State private var expandView: Bool = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      GeometryReader {_ in
+        let size = 0$.size
+        VStack() {
+          
+        }
+      }
     }
 }
 

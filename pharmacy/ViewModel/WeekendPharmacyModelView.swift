@@ -41,10 +41,9 @@ class WeekendPharmacyModelView: ObservableObject {
       return
     }
 
-
     URLSession.shared.dataTaskPublisher(for: url)
           .map(\.data)
-          .decode(type: PharmacyList.self, decoder: XMLDecoder())
+          .decode(type: PharmacyModel.self, decoder: XMLDecoder())
           .receive(on: DispatchQueue.main)
           .sink(receiveCompletion: { completion in
             switch completion {

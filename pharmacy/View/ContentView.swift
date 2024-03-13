@@ -6,19 +6,35 @@
 //
 
 import SwiftUI
+import XMLCoder
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+  @StateObject var weekendPharmacyModelView = WeekendPharmacyModelView()
+
+  var appVersion: String {
+    if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+      return version
     }
+    return "Unknown"
+  }
+
+  var body: some View {
+//    VStack {
+//      Text("App Version: \(appVersion)")
+//    }
+    TabView {
+      WeekendPharmacyView()
+        .environmentObject(weekendPharmacyModelView)
+        .tabItem {
+          Image(systemName: "house")
+        }
+    }
+    .accentColor(.black)
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
+
+
