@@ -7,6 +7,7 @@
 
 import SwiftUI
 //test
+//test2
 @main
 struct pharmacyApp: App {
     var body: some Scene {
