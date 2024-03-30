@@ -5,7 +5,7 @@ struct Header: Codable {
   let resultMsg: String
 }
 
-struct Item: Codable, Identifiable, Equatable {
+struct Item: Codable, Identifiable, Equatable, Hashable {
   var id: Double { wgs84Lat }
   let dutyAddr: String
   let dutyName: String

@@ -22,13 +22,17 @@ struct ContentView: View {
 //    VStack {
 //      Text("App Version: \(appVersion)")
 //    }
-    TabView {
+//    TabView {
       WeekendPharmacyView()
         .environmentObject(weekendPharmacyModelView)
-        .tabItem {
-          Image(systemName: "house")
-        }
-    }
+//        .tabItem {
+//          Label(
+//            title: { Text("홈") },
+//            icon: { Image(systemName: "house") }
+//          )
+//        }
+//        .tag(0)
+//    }
     .accentColor(.black)
   }
 }

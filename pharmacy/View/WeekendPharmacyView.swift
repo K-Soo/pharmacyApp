@@ -8,18 +8,25 @@
 import SwiftUI
 
 struct WeekendPharmacyView: View {
-  @State private var isShow = false
-  @State private var selectedPharmacy: Item?
-
   @EnvironmentObject var vm: WeekendPharmacyModelView
+  @State private var isShow = false
+  @State var draw: Bool = false
+  @State private var selectedPharmacy: Item? {
+    didSet {
+      if let current = selectedPharmacy {
+        print(current,"@@")
+      }
+    }
+  }
+
 
   var body: some View {
     NavigationStack {
-
-      HStack(alignment: .top) {
-        AddressPickerView()
-  
-        Spacer()
+      HStack {
+        HStack(alignment: .top) {
+          AddressPickerView()
+          Spacer()
+        }
       }
       VStack {
         if vm.pharmacyItems.isEmpty && !vm.isLoading {
@@ -32,17 +39,14 @@ struct WeekendPharmacyView: View {
           ScrollView(showsIndicators: false) {
             ForEach(0..<vm.pharmacyItems.count, id: \.self) { index in
               LazyVStack {
-                PharmacyCellView(pharmacy: vm.pharmacyItems[index])
-                  .onAppear {
-                    if index >= vm.pharmacyItems.count - 1 {
-                      vm.fetchPharmacyIfNeeded(for: index)
+                NavigationLink(value: vm.pharmacyItems[index]) {
+                  PharmacyCellView(pharmacy: vm.pharmacyItems[index])
+                    .onAppear {
+                      if index >= vm.pharmacyItems.count - 1 {
+                        vm.fetchPharmacyIfNeeded(for: index)
+                      }
                     }
-                  }
-                  .onTapGesture {
-                    let generator = UIImpactFeedbackGenerator(style: .soft)
-                    generator.impactOccurred()
-                    selectedPharmacy = vm.pharmacyItems[index]
-                  }
+                }
               }
             } //ForEach
             .padding(10)
@@ -52,6 +56,18 @@ struct WeekendPharmacyView: View {
         }
       } //VStack
       .navigationTitle("주말약국")
+      .navigationDestination(for: Item.self, destination: { data in
+        ZStack {
+          KakaoMapView(draw: $draw, long: data.wgs84Lon, lat: data.wgs84Lat)
+            .edgesIgnoringSafeArea(.all)
+            .onAppear(perform: {
+              self.draw = true
+            })
+            .onDisappear {
+              self.draw = false
+            }
+        }
+      })
       .navigationBarTitleDisplayMode(.inline)
       .overlay(content: {
         if vm.isLoading && vm.pharmacyItems.isEmpty {

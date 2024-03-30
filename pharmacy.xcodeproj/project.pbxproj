@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B506FBC42B9E3DF4006A7289 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506FBC32B9E3DF4006A7289 /* EmptyView.swift */; };
+		B50B19962BA59D040093B492 /* WeekendPharmacyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B19952BA59D040093B492 /* WeekendPharmacyDetailView.swift */; };
 		B528EF832B9E70030063B66C /* WeekendPharmacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B528EF822B9E70030063B66C /* WeekendPharmacyView.swift */; };
 		B594248C2B9BEBE100DCAC6D /* pharmacyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B594248B2B9BEBE100DCAC6D /* pharmacyApp.swift */; };
 		B594248E2B9BEBE100DCAC6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B594248D2B9BEBE100DCAC6D /* ContentView.swift */; };
@@ -21,10 +22,13 @@
 		B59424B02B9DB35400DCAC6D /* AddressPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59424AF2B9DB35400DCAC6D /* AddressPickerView.swift */; };
 		B59424B22B9DB96A00DCAC6D /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59424B12B9DB96A00DCAC6D /* CityModel.swift */; };
 		B59424B42B9DBA8600DCAC6D /* DistrictsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59424B32B9DBA8600DCAC6D /* DistrictsModel.swift */; };
+		B5FA72142BA590FB005404C7 /* KakaoMapsSDK_SPM in Frameworks */ = {isa = PBXBuildFile; productRef = B5FA72132BA590FB005404C7 /* KakaoMapsSDK_SPM */; };
+		B5FA72162BA59183005404C7 /* KakaoMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA72152BA59183005404C7 /* KakaoMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B506FBC32B9E3DF4006A7289 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		B50B19952BA59D040093B492 /* WeekendPharmacyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendPharmacyDetailView.swift; sourceTree = "<group>"; };
 		B528EF822B9E70030063B66C /* WeekendPharmacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendPharmacyView.swift; sourceTree = "<group>"; };
 		B59424882B9BEBE100DCAC6D /* pharmacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pharmacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B594248B2B9BEBE100DCAC6D /* pharmacyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pharmacyApp.swift; sourceTree = "<group>"; };
@@ -39,6 +43,7 @@
 		B59424AF2B9DB35400DCAC6D /* AddressPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressPickerView.swift; sourceTree = "<group>"; };
 		B59424B12B9DB96A00DCAC6D /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		B59424B32B9DBA8600DCAC6D /* DistrictsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictsModel.swift; sourceTree = "<group>"; };
+		B5FA72152BA59183005404C7 /* KakaoMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59424A12B9BF43900DCAC6D /* XMLCoder in Frameworks */,
+				B5FA72142BA590FB005404C7 /* KakaoMapsSDK_SPM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +116,8 @@
 				B59424AF2B9DB35400DCAC6D /* AddressPickerView.swift */,
 				B506FBC32B9E3DF4006A7289 /* EmptyView.swift */,
 				B528EF822B9E70030063B66C /* WeekendPharmacyView.swift */,
+				B5FA72152BA59183005404C7 /* KakaoMapView.swift */,
+				B50B19952BA59D040093B492 /* WeekendPharmacyDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 			name = pharmacy;
 			packageProductDependencies = (
 				B59424A02B9BF43900DCAC6D /* XMLCoder */,
+				B5FA72132BA590FB005404C7 /* KakaoMapsSDK_SPM */,
 			);
 			productName = pharmacy;
 			productReference = B59424882B9BEBE100DCAC6D /* pharmacy.app */;
@@ -179,6 +188,7 @@
 			mainGroup = B594247F2B9BEBE000DCAC6D;
 			packageReferences = (
 				B594249F2B9BF43900DCAC6D /* XCRemoteSwiftPackageReference "XMLCoder" */,
+				B5FA72122BA590FB005404C7 /* XCRemoteSwiftPackageReference "KakaoMapsSDK-SPM" */,
 			);
 			productRefGroup = B59424892B9BEBE100DCAC6D /* Products */;
 			projectDirPath = "";
@@ -206,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50B19962BA59D040093B492 /* WeekendPharmacyDetailView.swift in Sources */,
 				B59424A62B9C2A3600DCAC6D /* WeekendPharmacyModelView.swift in Sources */,
 				B594248E2B9BEBE100DCAC6D /* ContentView.swift in Sources */,
 				B59424B42B9DBA8600DCAC6D /* DistrictsModel.swift in Sources */,
@@ -215,6 +226,7 @@
 				B506FBC42B9E3DF4006A7289 /* EmptyView.swift in Sources */,
 				B59424AA2B9C84B600DCAC6D /* PharmacyCellView.swift in Sources */,
 				B59424B22B9DB96A00DCAC6D /* CityModel.swift in Sources */,
+				B5FA72162BA59183005404C7 /* KakaoMapView.swift in Sources */,
 				B528EF832B9E70030063B66C /* WeekendPharmacyView.swift in Sources */,
 				B594248C2B9BEBE100DCAC6D /* pharmacyApp.swift in Sources */,
 			);
@@ -448,6 +460,14 @@
 				minimumVersion = 0.17.1;
 			};
 		};
+		B5FA72122BA590FB005404C7 /* XCRemoteSwiftPackageReference "KakaoMapsSDK-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao-mapsSDK/KakaoMapsSDK-SPM";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -455,6 +475,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B594249F2B9BF43900DCAC6D /* XCRemoteSwiftPackageReference "XMLCoder" */;
 			productName = XMLCoder;
+		};
+		B5FA72132BA590FB005404C7 /* KakaoMapsSDK_SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5FA72122BA590FB005404C7 /* XCRemoteSwiftPackageReference "KakaoMapsSDK-SPM" */;
+			productName = KakaoMapsSDK_SPM;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
