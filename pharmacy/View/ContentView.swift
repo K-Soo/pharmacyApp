@@ -11,27 +11,19 @@ import XMLCoder
 struct ContentView: View {
   @StateObject var weekendPharmacyModelView = WeekendPharmacyModelView()
 
-  var appVersion: String {
-    if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-      return version
-    }
-    return "Unknown"
-  }
-
   var body: some View {
-//    VStack {
-//      Text("App Version: \(appVersion)")
-//    }
+
 //    TabView {
-      WeekendPharmacyView()
-        .environmentObject(weekendPharmacyModelView)
+      GreenView()
 //        .tabItem {
-//          Label(
-//            title: { Text("홈") },
-//            icon: { Image(systemName: "house") }
-//          )
+//          Image(systemName: "house")
+//          Text("홈")
 //        }
-//        .tag(0)
+//      BlueView()
+//        .tabItem {
+//          Image(systemName: "house")
+//          Text("홈")
+//        }
 //    }
     .accentColor(.black)
   }

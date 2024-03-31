@@ -22,6 +22,9 @@
 		B59424B02B9DB35400DCAC6D /* AddressPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59424AF2B9DB35400DCAC6D /* AddressPickerView.swift */; };
 		B59424B22B9DB96A00DCAC6D /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59424B12B9DB96A00DCAC6D /* CityModel.swift */; };
 		B59424B42B9DBA8600DCAC6D /* DistrictsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59424B32B9DBA8600DCAC6D /* DistrictsModel.swift */; };
+		B5F7654C2BB843710019138F /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7654B2BB843710019138F /* GreenView.swift */; };
+		B5F7654E2BB843F50019138F /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7654D2BB843F50019138F /* BlueView.swift */; };
+		B5F765502BB84A280019138F /* GreenDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7654F2BB84A280019138F /* GreenDetail.swift */; };
 		B5FA72142BA590FB005404C7 /* KakaoMapsSDK_SPM in Frameworks */ = {isa = PBXBuildFile; productRef = B5FA72132BA590FB005404C7 /* KakaoMapsSDK_SPM */; };
 		B5FA72162BA59183005404C7 /* KakaoMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA72152BA59183005404C7 /* KakaoMapView.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +46,9 @@
 		B59424AF2B9DB35400DCAC6D /* AddressPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressPickerView.swift; sourceTree = "<group>"; };
 		B59424B12B9DB96A00DCAC6D /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		B59424B32B9DBA8600DCAC6D /* DistrictsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictsModel.swift; sourceTree = "<group>"; };
+		B5F7654B2BB843710019138F /* GreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenView.swift; sourceTree = "<group>"; };
+		B5F7654D2BB843F50019138F /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
+		B5F7654F2BB84A280019138F /* GreenDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenDetail.swift; sourceTree = "<group>"; };
 		B5FA72152BA59183005404C7 /* KakaoMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +124,9 @@
 				B528EF822B9E70030063B66C /* WeekendPharmacyView.swift */,
 				B5FA72152BA59183005404C7 /* KakaoMapView.swift */,
 				B50B19952BA59D040093B492 /* WeekendPharmacyDetailView.swift */,
+				B5F7654B2BB843710019138F /* GreenView.swift */,
+				B5F7654D2BB843F50019138F /* BlueView.swift */,
+				B5F7654F2BB84A280019138F /* GreenDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,16 +225,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F765502BB84A280019138F /* GreenDetail.swift in Sources */,
 				B50B19962BA59D040093B492 /* WeekendPharmacyDetailView.swift in Sources */,
 				B59424A62B9C2A3600DCAC6D /* WeekendPharmacyModelView.swift in Sources */,
 				B594248E2B9BEBE100DCAC6D /* ContentView.swift in Sources */,
 				B59424B42B9DBA8600DCAC6D /* DistrictsModel.swift in Sources */,
+				B5F7654E2BB843F50019138F /* BlueView.swift in Sources */,
 				B594249D2B9BEC8600DCAC6D /* APIService.swift in Sources */,
 				B59424A32B9BF52900DCAC6D /* PharmacyModel.swift in Sources */,
 				B59424B02B9DB35400DCAC6D /* AddressPickerView.swift in Sources */,
 				B506FBC42B9E3DF4006A7289 /* EmptyView.swift in Sources */,
 				B59424AA2B9C84B600DCAC6D /* PharmacyCellView.swift in Sources */,
 				B59424B22B9DB96A00DCAC6D /* CityModel.swift in Sources */,
+				B5F7654C2BB843710019138F /* GreenView.swift in Sources */,
 				B5FA72162BA59183005404C7 /* KakaoMapView.swift in Sources */,
 				B528EF832B9E70030063B66C /* WeekendPharmacyView.swift in Sources */,
 				B594248C2B9BEBE100DCAC6D /* pharmacyApp.swift in Sources */,
